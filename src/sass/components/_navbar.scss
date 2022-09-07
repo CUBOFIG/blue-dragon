@@ -1,0 +1,63 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: transparent;
+  height: 5rem;
+  transition: all 0.5s linear;
+  z-index: 5;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  &__left img {
+    width: 3.8rem;
+    height: auto;
+  }
+
+  &__right {
+    display: flex;
+    list-style: none;
+
+    & li a {
+      cursor: pointer;
+      color: #fff;
+      color: $white;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin: 0.65rem 1rem;
+      padding: 1rem 0.5rem;
+      text-decoration: none;
+      display: none;
+
+      @include responsive(768px) {
+        display: block;
+      }
+    }
+
+    & li:last-child svg {
+      color: #fff;
+      cursor: pointer;
+
+      @include responsive(768px) {
+        display: none;
+      }
+    }
+
+    .scroll-menu {
+      color: rgb(27, 27, 27) !important;
+    }
+
+    &:hover li:last-child svg {
+      color: rgb(226, 21, 165);
+    }
+  }
+}

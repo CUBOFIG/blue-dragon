@@ -1,0 +1,48 @@
+.header {
+  @include bgImage('../../images/5.png');
+  @include flexCenter;
+  background-color: rgba(0,0,0,.6);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  height: 100vh;
+  width: 100%;
+
+  @include responsive(765px){
+    // background-size: 100% 100%;
+  }
+
+  &__content {
+    text-align: center;
+
+    &-links a{
+      color: $white;
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+
+    &-span {
+      background-color: $white;
+      display: inline-block;
+      height: 1rem;
+      margin-left: 1.25rem;
+      transform: rotate(10deg);
+      width: 0.125rem;
+    }
+  }
+
+  &__content-h1 {
+    font-size: 600;
+    font-size: 75px;
+    letter-spacing: .2rem;
+    margin-bottom: 20px;
+    animation: mymove 8s infinite;
+  }
+
+  @keyframes mymove {
+    0% {text-shadow: 5px 10px 15px $pink;}
+    70% {text-shadow: 5px 10px 15px black;}
+    100% {text-shadow: 5px 10px 15px $pink;}
+  }
+}

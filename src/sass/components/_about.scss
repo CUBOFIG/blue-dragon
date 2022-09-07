@@ -1,0 +1,104 @@
+.about {
+  width: 100%;
+  margin-bottom: 4rem;
+
+  &-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  &__information-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    @include responsive(1024px) {
+      flex-direction: row;
+      height: 200px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      &>div {
+        width: 30%;
+      }
+
+      & div:nth-child(2) {
+        text-align: left;
+        padding: 0 8rem;
+        width: 70%;
+      }
+    }
+  }
+
+  &__h4 {
+    margin-top: 4rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__text {
+    margin-top: 2rem;
+    color: $silver;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2;
+
+    @include responsive(1024px) {
+      width: 100% !important;
+    }
+  }
+
+  &-container-cards {
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(1024px) {
+      flex-direction: row;
+    }
+  }
+
+  &__card {
+    margin-bottom: 2rem;
+
+    @include responsive(1024px) {
+      width: 30%;
+      height: 250px;
+      margin: 0 auto;
+    }
+  }
+
+  &__section {
+    background-color: #e0e0e0ef;
+    padding: 3.5rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-icon {
+      font-size: 2.5rem;
+      color: $pink;
+      margin-bottom: 0.7rem;
+    }
+
+    &-heading h5 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    &-text {
+      color: $silver;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    @include responsive(1024px) {
+      height: 100%;
+    }
+  }
+
+}

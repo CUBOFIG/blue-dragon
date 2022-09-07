@@ -1,0 +1,63 @@
+.sidebar {
+  overflow: hidden;
+
+  &-container {
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & div {
+      height: 60px;
+      background-color: $pink;
+      color: black;
+    }
+
+    & ul {
+      margin-top: 4rem;
+      text-align: center;
+      padding: 0;
+    }
+
+    & li {
+      font-weight: 600;
+      margin-bottom: 2rem;
+      list-style: none;
+      cursor: pointer;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+
+  &__format {
+    background: rgb(24, 23, 23);
+    //border-radius: 1.2rem 0 0 1.2rem;
+    color: black;
+    margin-right: -150%;
+    min-height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+    width: 60%;
+    z-index: 1000;
+  }
+
+  &__is-open {
+    margin-right: 0;
+  }
+
+  &__overlay {
+    background-color: rgba(22, 22, 22, 0.37);
+    overflow: hidden;
+    height: 120%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}

@@ -1,0 +1,29 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexVertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin responsive($width) {
+  @media(min-width:$width) {
+    @content;
+  }
+}
+
+@mixin bgImage($image) {
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url($image);
+  background-position: 33% 50%;
+
+  @include responsive(768px) {
+    background-position: 50% 50%;
+  }
+}

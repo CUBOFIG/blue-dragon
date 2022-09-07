@@ -1,0 +1,164 @@
+.portfolio {
+  width: 100%;
+  height: 31.25rem;
+  position: relative;
+
+  &__section {
+    height: 31.25rem;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .contente {
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(1200px) {
+      flex-direction: row;
+    }
+  }
+
+  &__flex-content {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+
+    @include responsive(1200px) {
+      width: 40%;
+    }
+
+    @include responsive(1400px) {
+      width: 40%;
+      padding: 1.5rem;
+    }
+  }
+
+  &__cards-container {
+    background: #1b1b1b;
+    padding: 2rem;
+
+
+    .carousel-content {
+      margin-right: auto;
+    }
+
+    @include responsive(1200px) {
+      width: 60%;
+    }
+
+    @include responsive(1400px) {
+      width: 61%;
+    }
+  }
+
+  &__content {
+    margin-left: auto;
+    padding: 1.5rem;
+
+    &-h5 {
+      color: $pink;
+      font-size: 1.1rem;
+      font-weight: 300;
+      letter-spacing: 0.88rem;
+      margin-bottom: 0.32rem;
+      text-transform: uppercase;
+    }
+
+    &-h3 {
+      display: inline-block;
+      font-size: 3.75rem;
+      font-weight: 700;
+      letter-spacing: 0.25rem;
+      text-shadow: 0 0.5rem rgba(0, 0, 0, 0.05);
+      text-transform: uppercase;
+    }
+
+    @include responsive(600px) {
+      margin: 0;
+    }
+
+    @include responsive(900px) {}
+
+    @include responsive(1200px) {
+      width: auto;
+    }
+
+    @include responsive(1400px) {
+      margin-left: auto;
+      padding: 3.5rem;
+    }
+  }
+
+  .contaiaa {
+    @include responsive(1200px) {
+      max-width: 950px;
+      padding: 0;
+      margin-right: auto;
+      padding: 2rem 0;
+    }
+  }
+
+  .carousel .control-dots {
+    bottom: -10px;
+  }
+
+  .carousel .thumbs-wrapper {
+    margin: 0;
+  }
+
+  .card-c {
+    margin: 0 1rem;
+
+    @include responsive(600px) {
+      margin: 0;
+    }
+  }
+
+  &__card {
+    margin: auto;
+    width: 100%;
+    background: $pink;
+    padding-bottom: 15px;
+    margin-bottom: 2rem;
+    box-shadow: #000 1px 1px 0,
+      #000 2px 2px 0,
+      #000 3px 3px 0,
+      #000 4px 4px 0,
+      #000 5px 5px 0,
+      #000 6px 6px 0,
+      #000 7px 7px 0,
+      #000 8px 8px 0;
+
+    &-img img {
+      width: 100%;
+      height: auto;
+
+    }
+
+    &-name {
+      padding-left: 15px;
+      font-size: 1.125rem;
+    }
+
+    &-expert {
+      padding-left: 15px;
+      font-size: 0.875rem;
+    }
+
+    @include responsive(900px) {
+      width: 250px
+    }
+
+  }
+
+  .react-multi-carousel-dot button {
+    border-color: #1b1b1b;
+  }
+
+  .react-multi-carousel-dot--active button {
+    background-color: #e215a5;
+  }
+
+}

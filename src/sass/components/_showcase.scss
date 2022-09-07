@@ -1,0 +1,84 @@
+.showcase {
+  @include bgImage("../../images/tiger.jpg");
+  background-color: rgba(0, 0, 0, 0.7);
+  color: $white;
+  height: 32rem;
+  width: 100%;
+
+  &__content {
+    position: relative;
+
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1500px;
+    padding: 0 1.5rem;
+  }
+
+  &__content-title {
+    margin: 2rem 0 0 2rem;
+    padding-top: 2rem;
+  }
+
+  &__content-title h1 {
+    font-size: 2rem;
+    font-weight: 700;
+
+    @include responsive(600px) {
+      font-size: 3rem;
+    }
+
+    @include responsive(900px) {
+      font-size: 4rem;
+    }
+  }
+
+  &__card {
+    position: absolute;
+
+    background: $pink;
+    bottom: -15rem;
+    color: $black;
+    padding: 3rem 2.5rem;
+
+    top: 90px;
+    margin: 0;
+
+    max-width: 100%;
+    padding: 2.5rem 2.5rem;
+    right: 0rem;
+
+    top: 180px;
+    height: 377px;
+
+    margin: 1rem;
+
+    &-h5 {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.19rem;
+      margin-bottom: 0.625rem;
+    }
+
+    &-h4 {
+      color: #0c0f16;
+      font-size: 1.875rem;
+      font-weight: 600;
+      margin-bottom: 0.625rem;
+    }
+
+    &-text {
+      font-size: 0.938rem;
+      letter-spacing: 1px;
+    }
+
+    @include responsive(425px) {
+      margin: 0;
+      max-width: 377px;
+      padding: 2.5rem 2.5rem;
+      right: 1.5rem;
+      top: 180px;
+      height: 377px;
+    }
+  }
+
+}
